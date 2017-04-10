@@ -11,13 +11,14 @@ import java.util.Date;
  */
 public class DateUtil {
 	
+	public static final String YYYY_MM_DD_HH_MM_SS_S = "yyyy-MM-dd HH:mm:ss S";
+	
 	public static final String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
 	
 	public static final String YYYY_MM_DD = "yyyy-MM-dd";
 	
 	public static final String YYYYMMDD = "yyyyMMdd";
 	
-	public static final String YYYY_MM_DD_HH_MM_SS_S = "yyyy-MM-dd HH:mm:ss S";
 	
 	/**
 	 * 将String格式字符串转化成特定格式的时间
