@@ -45,7 +45,7 @@ public class IpLocationUtil {
 		
 		String content = null;
 		try {
-			content = HttpsUtil.requestGet(baiduLocationApi);
+//			content = HttpsUtil.requestGet(baiduLocationApi);
 			JSONObject jsonObject = JSONObject.fromObject(content);
 			Integer code = (Integer) jsonObject.get("status");
 			if (code != null && code == 0) {
