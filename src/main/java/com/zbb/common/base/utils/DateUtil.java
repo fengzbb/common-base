@@ -2,6 +2,7 @@ package com.zbb.common.base.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -11,13 +12,21 @@ import java.util.Date;
  */
 public class DateUtil {
 	
-	public static final String YYYY_MM_DD_HH_MM_SS_S = "yyyy-MM-dd HH:mm:ss S";
+	public static final String YYYY_MM_DD_HH_MM_SS_SSS = "yyyy-MM-dd HH:mm:ss SSS";
 	
 	public static final String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
+	
+	public static final String YYYY_MM_DD_HH_MM = "yyyy-MM-dd HH:mm";
+	
+	public static final String YYYY_MM_DD_HH = "yyyy-MM-dd HH";
 	
 	public static final String YYYY_MM_DD = "yyyy-MM-dd";
 	
 	public static final String YYYYMMDD = "yyyyMMdd";
+	
+	public static final String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
+	
+	public static final String YYYY_NIAN_MM_YUE_DD_RI_HH_MM_SS = "yyyy年MM月dd日 HH:mm:ss";
 	
 	
 	/**
@@ -79,14 +88,69 @@ public class DateUtil {
 		return date1.after(date2);
 	}
 	
+	/**
+	 * 根据日期获得星期
+	 * @param date
+	 * @return
+	 */
+	public static String getWeekOfDate(Date date) {
+		String[] weekDaysName = { "周日", "周一", "周二", "周三", "周四", "周五", "周六" };
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		int intWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+		return weekDaysName[intWeek];
+	}
+	
+	/**
+	 * 增减分钟数
+	 * @param date
+	 * @param amount
+	 * @return
+	 */
+	public static Date addByMinutes(Date date, int amount) {
+		return add(date, Calendar.MINUTE, amount);
+	}
+	
+	/**
+	 * 增减小时数
+	 * @param date
+	 * @param amount
+	 * @return
+	 */
+	public static Date addByHours(Date date, int amount) {
+		return add(date, Calendar.HOUR_OF_DAY, amount);
+	}
+	
+	/**
+	 * 增减天数
+	 * @param date
+	 * @param amount
+	 * @return
+	 */
+	public static Date addByDays(Date date, int amount) {
+		return add(date, Calendar.DAY_OF_MONTH, amount);
+	}
+
+	public static Date add(Date date, int calendarField, int amount) {
+		if (date == null) {
+			throw new IllegalArgumentException("The date must not be null");
+		}
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		c.add(calendarField, amount);
+		return c.getTime();
+	}
+	
+	
 	public static void main(String[] args) {
 		String s = "2017-04-04";
-		String s1 = "2017-04-04";
+//		String s1 = "2017-04-04";
 		Date date1 = DateUtil.parseDate(s, DateUtil.YYYY_MM_DD);
-		Date date2 = DateUtil.parseDate(s1, DateUtil.YYYY_MM_DD);
-		
-		System.out.println(DateUtil.isBefore(date1, date2));
-		System.out.println(DateUtil.isAfter(date2, date1));
+//		Date date2 = DateUtil.parseDate(s1, DateUtil.YYYY_MM_DD);
+//		
+//		System.out.println(DateUtil.isBefore(date1, date2));
+//		System.out.println(DateUtil.isAfter(date2, date1));
+		System.out.println(DateUtil.formatDate(DateUtil.addByDays(date1, -10), DateUtil.YYYY_MM_DD));
 		
 	}
 	
