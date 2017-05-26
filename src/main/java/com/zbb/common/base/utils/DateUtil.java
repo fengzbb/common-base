@@ -6,9 +6,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @Description:Ê±¼ä¹¤¾ßÀà
+ * @Description:æ—¶é—´å·¥å…·ç±»
  * @author zbb
- * @date 2017Äê4ÔÂ10ÈÕ ÉÏÎç10:53:03
+ * @date 2017å¹´5æœˆ26æ—¥ ä¸‹åˆ3:07:44
  */
 public class DateUtil {
 	
@@ -26,11 +26,11 @@ public class DateUtil {
 	
 	public static final String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
 	
-	public static final String YYYY_NIAN_MM_YUE_DD_RI_HH_MM_SS = "yyyyÄêMMÔÂddÈÕ HH:mm:ss";
+	public static final String YYYY_NIAN_MM_YUE_DD_RI_HH_MM_SS = "yyyyï¿½ï¿½MMï¿½ï¿½ddï¿½ï¿½ HH:mm:ss";
 	
 	
 	/**
-	 * ½«String¸ñÊ½×Ö·û´®×ª»¯³ÉÌØ¶¨¸ñÊ½µÄÊ±¼ä
+	 * ï¿½ï¿½Stringï¿½ï¿½Ê½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ê±ï¿½ï¿½
 	 * @param strDate
 	 * @param pattern
 	 * @return
@@ -47,7 +47,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ½«Ê±¼ä¸ñÊ½×ª»¯³ÉÌØ¶¨¸ñÊ½µÄ×Ö·û´®Ê±¼ä
+	 * ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ê½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 * @param date
 	 * @param pattern
 	 * @return
@@ -58,7 +58,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ½«long¸ñÊ½µÄÊ±¼ä×ª»¯³ÉÌØ¶¨¸ñÊ½µÄ×Ö·û´®Ê±¼ä
+	 * ï¿½ï¿½longï¿½ï¿½Ê½ï¿½ï¿½Ê±ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 	 * @param date
 	 * @param pattern
 	 * @return
@@ -69,7 +69,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * date1 ÔçÓÚ date2
+	 * date1 ï¿½ï¿½ï¿½ï¿½ date2
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -79,7 +79,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * date1 ÍíÓÚ date2
+	 * date1 ï¿½ï¿½ï¿½ï¿½ date2
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -89,12 +89,12 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ¸ù¾İÈÕÆÚ»ñµÃĞÇÆÚ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param date
 	 * @return
 	 */
 	public static String getWeekOfDate(Date date) {
-		String[] weekDaysName = { "ÖÜÈÕ", "ÖÜÒ»", "ÖÜ¶ş", "ÖÜÈı", "ÖÜËÄ", "ÖÜÎå", "ÖÜÁù" };
+		String[] weekDaysName = { "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½Ò»", "ï¿½Ü¶ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½" };
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		int intWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
@@ -102,7 +102,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * Ôö¼õ·ÖÖÓÊı
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param date
 	 * @param amount
 	 * @return
@@ -112,7 +112,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * Ôö¼õĞ¡Ê±Êı
+	 * ï¿½ï¿½ï¿½ï¿½Ğ¡Ê±ï¿½ï¿½
 	 * @param date
 	 * @param amount
 	 * @return
@@ -122,7 +122,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * Ôö¼õÌìÊı
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param date
 	 * @param amount
 	 * @return
