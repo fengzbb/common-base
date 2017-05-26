@@ -26,11 +26,11 @@ public class DateUtil {
 	
 	public static final String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
 	
-	public static final String YYYY_NIAN_MM_YUE_DD_RI_HH_MM_SS = "yyyy��MM��dd�� HH:mm:ss";
+	public static final String YYYY_NIAN_MM_YUE_DD_RI_HH_MM_SS = "yyyy年MM月dd日 HH:mm:ss";
 	
 	
 	/**
-	 * ��String��ʽ�ַ���ת�����ض���ʽ��ʱ��
+	 * 将String字符串转成特定格式的时间对象
 	 * @param strDate
 	 * @param pattern
 	 * @return
@@ -47,7 +47,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ��ʱ���ʽת�����ض���ʽ���ַ���ʱ��
+	 * 将时间对象转化为特定格式的字符串
 	 * @param date
 	 * @param pattern
 	 * @return
@@ -58,7 +58,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ��long��ʽ��ʱ��ת�����ض���ʽ���ַ���ʱ��
+	 * 将long值转化为特定格式的时间字符串
 	 * @param date
 	 * @param pattern
 	 * @return
@@ -69,7 +69,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * date1 ���� date2
+	 * date1 早于 date2
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -79,7 +79,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * date1 ���� date2
+	 * date1晚于 date2
 	 * @param date1
 	 * @param date2
 	 * @return
@@ -89,12 +89,12 @@ public class DateUtil {
 	}
 	
 	/**
-	 * �������ڻ������
+	 * 获取时间所对应的日期
 	 * @param date
 	 * @return
 	 */
 	public static String getWeekOfDate(Date date) {
-		String[] weekDaysName = { "����", "��һ", "�ܶ�", "����", "����", "����", "����" };
+		String[] weekDaysName = { "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日" };
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		int intWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
@@ -102,7 +102,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ����������
+	 * 增减时间 按分
 	 * @param date
 	 * @param amount
 	 * @return
@@ -112,7 +112,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ����Сʱ��
+	 * 增减时间 按xiaoshi
 	 * @param date
 	 * @param amount
 	 * @return
@@ -122,7 +122,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * ��������
+	 * 增减时间 按天
 	 * @param date
 	 * @param amount
 	 * @return
