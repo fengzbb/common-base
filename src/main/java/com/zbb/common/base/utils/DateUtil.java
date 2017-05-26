@@ -94,7 +94,7 @@ public class DateUtil {
 	 * @return
 	 */
 	public static String getWeekOfDate(Date date) {
-		String[] weekDaysName = { "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日" };
+		String[] weekDaysName = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		int intWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
