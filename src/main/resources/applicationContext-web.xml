@@ -34,8 +34,9 @@
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
 		<property name="locations">
 			<list>
-				<value>${PRO_HOME}info.properties</value>
-				<value>file:E:\\ProgramFile\workspace\cmsV4new\src\main\resources\config\info.properties</value>
+<!-- 				<value>${PRO_HOME}info.properties</value> -->
+<!-- 				<value>classpath:info.properties</value> -->
+				<value>file:D:\\eclipse\workspace\zbb-common-base\src\main\resources\info.properties</value>
 			</list>
 		</property>
 	</bean>
