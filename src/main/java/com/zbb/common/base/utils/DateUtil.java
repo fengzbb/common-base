@@ -47,6 +47,24 @@ public class DateUtil {
 	}
 	
 	/**
+	 * 将long值转化为特定格式的时间
+	 * @param time
+	 * @param pattern
+	 * @return
+	 */
+	public static Date parseDate(Long time, String pattern){
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		String timeStr = formatDate(new Date(time), pattern);
+		Date date = null;
+		try {
+			date = sdf.parse(timeStr);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return date;
+	}
+	
+	/**
 	 * 将时间对象转化为特定格式的字符串
 	 * @param date
 	 * @param pattern
