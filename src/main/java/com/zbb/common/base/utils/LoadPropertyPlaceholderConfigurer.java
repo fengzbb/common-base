@@ -9,11 +9,10 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 
 /**
- * ¼ÓÔØÅäÖÃÎÄ¼şÄÚÈİ£¬
- * @Description:
- * @author zbb
- * @date 2017Äê5ÔÂ19ÈÕ ÏÂÎç2:18:41
- */
+* @Description: è¯»å–é…ç½®æ–‡ä»¶ å®šæ—¶è¯»å–(é‡‡ç”¨springçš„å®šæ—¶ä»»åŠ¡)
+* @Author: zbb
+* @Date: 2018/1/2 15:07
+*/
 public class LoadPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
 	
 	private static Map<String, Object> propertiesMap = new HashMap<String, Object>(); 
