@@ -7,10 +7,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
- * Ã¿5·ÖÖÓÖØĞÂ¼ÓÔØÒ»´ÎÅäÖÃÎÄ¼şÄÚÈİ
- * @Description:
- * @author zbb
- * @date 2017Äê5ÔÂ19ÈÕ ÏÂÎç2:20:13
+ * æ¯5åˆ†é’Ÿé‡æ–°åŠ è½½ä¸€æ¬¡é…ç½®æ–‡ä»¶å†…å®¹
+ * @Date 2019/1/8
  */
 @Component
 public class PropertyReload {
