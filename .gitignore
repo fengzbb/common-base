@@ -15,8 +15,6 @@ application.pid
 hs_err_pid*
 
 # Eclipse
-.classpath
-.project
 target
 .settings
 
@@ -26,3 +24,23 @@ target
 
 # git
 *.orig
+
+*.classpath
+*.project
+
+# IDE相关文件忽略（如下是IDEA的）
+*.idea
+*.iml
+.idea
+
+# 编译文件忽略
+target/*
+.idea/*
+/*/bin/*
+
+# 本地环境相关文件忽略
+/*/.settings/*
+/.settings/
+
+# 自动生成配置文件忽略
+/*/__ConfigTemp/*

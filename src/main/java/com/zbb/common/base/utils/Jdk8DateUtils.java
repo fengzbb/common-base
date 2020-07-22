@@ -101,14 +101,14 @@ public class Jdk8DateUtils {
 	
 	public static void main(String[] args) {
 		LocalDateTime local = LocalDateTime.parse("2017-07-20T00:00:00");
-		local = Jdk8DateUtils.addBySeconds(local, -1);
-		String formatDate = Jdk8DateUtils.formatDate(local,Jdk8DateUtils.YYYY_MM_DD_HH_MM_SS);
+		local = addBySeconds(local, -1);
+		String formatDate = formatDate(local,Jdk8DateUtils.YYYY_MM_DD_HH_MM_SS);
 		System.out.println("now--"+formatDate);
 		
 		long between = ChronoUnit.DAYS.between(local, local);
 		System.out.println(between);
 		
-		LocalDateTime dateToLocalTime = Jdk8DateUtils.dateToLocalTime(new Date(1503000859247L));
+		LocalDateTime dateToLocalTime = dateToLocalTime(new Date(1503000859247L));
 		System.out.println(dateToLocalTime);
 	}
 
